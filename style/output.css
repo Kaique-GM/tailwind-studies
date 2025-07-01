@@ -9,7 +9,9 @@
       "Courier New", monospace;
     --color-red-500: oklch(63.7% 0.237 25.331);
     --color-amber-400: oklch(82.8% 0.189 84.429);
+    --color-green-500: oklch(72.3% 0.219 149.579);
     --color-green-700: oklch(52.7% 0.154 150.069);
+    --color-blue-500: oklch(62.3% 0.214 259.815);
     --color-blue-700: oklch(48.8% 0.243 264.376);
     --color-rose-600: oklch(58.6% 0.253 17.585);
     --color-white: #fff;
@@ -176,8 +178,35 @@
   .mt-4 {
     margin-top: calc(var(--spacing) * 4);
   }
+  .flex {
+    display: flex;
+  }
   .table {
     display: table;
+  }
+  .h-20 {
+    height: calc(var(--spacing) * 20);
+  }
+  .h-96 {
+    height: calc(var(--spacing) * 96);
+  }
+  .w-1 {
+    width: calc(var(--spacing) * 1);
+  }
+  .w-1\/2 {
+    width: calc(1/2 * 100%);
+  }
+  .w-20 {
+    width: calc(var(--spacing) * 20);
+  }
+  .w-96 {
+    width: calc(var(--spacing) * 96);
+  }
+  .flex-1 {
+    flex: 1;
+  }
+  .flex-2 {
+    flex: 2;
   }
   .border-collapse {
     border-collapse: collapse;
@@ -191,6 +220,30 @@
   .resize {
     resize: both;
   }
+  .flex-col {
+    flex-direction: column;
+  }
+  .flex-row {
+    flex-direction: row;
+  }
+  .items-center {
+    align-items: center;
+  }
+  .items-end {
+    align-items: flex-end;
+  }
+  .justify-around {
+    justify-content: space-around;
+  }
+  .justify-between {
+    justify-content: space-between;
+  }
+  .justify-center {
+    justify-content: center;
+  }
+  .justify-end {
+    justify-content: flex-end;
+  }
   .rounded-lg {
     border-radius: var(--radius-lg);
   }
@@ -198,11 +251,24 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
+  .border-4 {
+    border-style: var(--tw-border-style);
+    border-width: 4px;
+  }
+  .bg-blue-500 {
+    background-color: var(--color-blue-500);
+  }
   .bg-blue-700 {
     background-color: var(--color-blue-700);
   }
+  .bg-green-500 {
+    background-color: var(--color-green-500);
+  }
   .bg-green-700 {
     background-color: var(--color-green-700);
+  }
+  .bg-red-500 {
+    background-color: var(--color-red-500);
   }
   .px-5 {
     padding-inline: calc(var(--spacing) * 5);
