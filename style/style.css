@@ -4,6 +4,10 @@
   --color-primaria: #41807C;
 
   --animate-floatUp: floatUp 2s infinite;
+
+  
+  --background-image-uber: url('../Aula/src/assets/bguber.png');
+  --background-image-city: url('../Aula/src/assets/bg-city.png');
   @keyframes floatUp {
     0% {
       transform: translateY(0px);
@@ -15,4 +19,5 @@
       transform: translateY(0px);
     }
   }
+
 }
