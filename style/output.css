@@ -17,6 +17,7 @@
     --color-gray-400: oklch(70.7% 0.022 261.325);
     --color-gray-700: oklch(37.3% 0.034 259.733);
     --color-zinc-900: oklch(21% 0.006 285.885);
+    --color-stone-800: oklch(26.8% 0.007 34.298);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
@@ -208,6 +209,12 @@
   .mb-4 {
     margin-bottom: calc(var(--spacing) * 4);
   }
+  .mb-5 {
+    margin-bottom: calc(var(--spacing) * 5);
+  }
+  .mb-6 {
+    margin-bottom: calc(var(--spacing) * 6);
+  }
   .mb-7 {
     margin-bottom: calc(var(--spacing) * 7);
   }
@@ -378,6 +385,9 @@
   .py-8 {
     padding-block: calc(var(--spacing) * 8);
   }
+  .py-11 {
+    padding-block: calc(var(--spacing) * 11);
+  }
   .pt-3 {
     padding-top: calc(var(--spacing) * 3);
   }
@@ -418,11 +428,17 @@
   .text-sky-600 {
     color: var(--color-sky-600);
   }
+  .text-stone-800 {
+    color: var(--color-stone-800);
+  }
   .text-white {
     color: var(--color-white);
   }
   .underline {
     text-decoration-line: underline;
+  }
+  .opacity-80 {
+    opacity: 80%;
   }
   .outline {
     outline-style: var(--tw-outline-style);
@@ -443,6 +459,16 @@
   .outline-none {
     --tw-outline-style: none;
     outline-style: none;
+  }
+  .hover\:scale-95 {
+    &:hover {
+      @media (hover: hover) {
+        --tw-scale-x: 95%;
+        --tw-scale-y: 95%;
+        --tw-scale-z: 95%;
+        scale: var(--tw-scale-x) var(--tw-scale-y);
+      }
+    }
   }
   .hover\:scale-105 {
     &:hover {
@@ -492,6 +518,13 @@
       }
     }
   }
+  .hover\:opacity-100 {
+    &:hover {
+      @media (hover: hover) {
+        opacity: 100%;
+      }
+    }
+  }
   .focus\:bg-white {
     &:focus {
       background-color: var(--color-white);
@@ -502,6 +535,11 @@
       display: flex;
     }
   }
+  .sm\:flex-row {
+    @media (width >= 40rem) {
+      flex-direction: row;
+    }
+  }
   .sm\:py-9 {
     @media (width >= 40rem) {
       padding-block: calc(var(--spacing) * 9);
@@ -510,6 +548,17 @@
   .sm\:py-10 {
     @media (width >= 40rem) {
       padding-block: calc(var(--spacing) * 10);
+    }
+  }
+  .sm\:py-11 {
+    @media (width >= 40rem) {
+      padding-block: calc(var(--spacing) * 11);
+    }
+  }
+  .sm\:text-4xl {
+    @media (width >= 40rem) {
+      font-size: var(--text-4xl);
+      line-height: var(--tw-leading, var(--text-4xl--line-height));
     }
   }
   .md\:mx-2 {
