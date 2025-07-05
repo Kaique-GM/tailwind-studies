@@ -58,6 +58,7 @@
     --default-mono-font-family: var(--font-mono);
     --background-image-uber: url('../Aula/src/assets/bguber.png');
     --background-image-city: url('../Aula/src/assets/bg-city.png');
+    --background-image-nike: url('../Aula/src/assets/bg.png');
   }
 }
 @layer base {
@@ -206,6 +207,9 @@
   }
 }
 @layer utilities {
+  .z-30 {
+    z-index: 30;
+  }
   .mx-auto {
     margin-inline: auto;
   }
@@ -232,9 +236,6 @@
   }
   .mb-2 {
     margin-bottom: calc(var(--spacing) * 2);
-  }
-  .mb-3 {
-    margin-bottom: calc(var(--spacing) * 3);
   }
   .mb-4 {
     margin-bottom: calc(var(--spacing) * 4);
@@ -298,6 +299,12 @@
   }
   .w-3\/4 {
     width: calc(3/4 * 100%);
+  }
+  .w-11 {
+    width: calc(var(--spacing) * 11);
+  }
+  .w-11\/12 {
+    width: calc(11/12 * 100%);
   }
   .w-20 {
     width: calc(var(--spacing) * 20);
@@ -371,6 +378,9 @@
   .self-start {
     align-self: flex-start;
   }
+  .overflow-hidden {
+    overflow: hidden;
+  }
   .rounded-full {
     border-radius: calc(infinity * 1px);
   }
@@ -417,9 +427,6 @@
   .bg-gray-300 {
     background-color: var(--color-gray-300);
   }
-  .bg-red-300 {
-    background-color: var(--color-red-300);
-  }
   .bg-slate-100 {
     background-color: var(--color-slate-100);
   }
@@ -438,11 +445,17 @@
   .bg-city {
     background-image: var(--background-image-city);
   }
+  .bg-nike {
+    background-image: var(--background-image-nike);
+  }
   .bg-uber {
     background-image: var(--background-image-uber);
   }
   .bg-cover {
     background-size: cover;
+  }
+  .bg-center {
+    background-position: center;
   }
   .bg-left {
     background-position: left;
@@ -452,6 +465,9 @@
   }
   .bg-no-repeat {
     background-repeat: no-repeat;
+  }
+  .object-cover {
+    object-fit: cover;
   }
   .p-2 {
     padding: calc(var(--spacing) * 2);
@@ -619,6 +635,20 @@
       }
     }
   }
+  .hover\:rotate-6 {
+    &:hover {
+      @media (hover: hover) {
+        rotate: 6deg;
+      }
+    }
+  }
+  .hover\:rotate-45 {
+    &:hover {
+      @media (hover: hover) {
+        rotate: 45deg;
+      }
+    }
+  }
   .hover\:border-gray-600 {
     &:hover {
       @media (hover: hover) {
@@ -756,6 +786,11 @@
       width: calc(1/2 * 100%);
     }
   }
+  .md\:w-full {
+    @media (width >= 48rem) {
+      width: 100%;
+    }
+  }
   .md\:flex-row {
     @media (width >= 48rem) {
       flex-direction: row;
@@ -771,6 +806,18 @@
     @media (width >= 48rem) {
       font-size: var(--text-base);
       line-height: var(--tw-leading, var(--text-base--line-height));
+    }
+  }
+  .md\:hover\:scale-125 {
+    @media (width >= 48rem) {
+      &:hover {
+        @media (hover: hover) {
+          --tw-scale-x: 125%;
+          --tw-scale-y: 125%;
+          --tw-scale-z: 125%;
+          scale: var(--tw-scale-x) var(--tw-scale-y);
+        }
+      }
     }
   }
   .lg\:w-full {
