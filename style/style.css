@@ -3,12 +3,38 @@
 @theme {
   --color-primaria: #41807C;
 
-  --animate-floatUp: floatUp 2s infinite;
-
-  
   --background-image-uber: url('../Aula/src/assets/bguber.png');
   --background-image-city: url('../Aula/src/assets/bg-city.png');
   --background-image-nike: url('../Aula/src/assets/bg.png');
+
+  --animate-floatUp: floatUp 2s infinite;
+  --animate-floatRight: floatRight 2.5s infinite;
+  --animate-opacityPulse: opacityPulse 2.5s infinite;
+
+   @keyframes opacityPulse {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.2;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes floatRight {
+    0% {
+      transform: translateX(0px);
+    }
+    50% {
+      transform: translateX(8px);
+    }
+    100% {
+      transform: translateX(0px);
+    }
+  }
+  
   @keyframes floatUp {
     0% {
       transform: translateY(0px);
@@ -19,6 +45,21 @@
     100% {
       transform: translateY(0px);
     }
+  }
+
+}
+
+@layer base {
+   h1 {
+      @apply text-5xl font-bold
+  }
+}
+
+@layer components {
+  .card {
+    background-color: aqua;
+    width: 100px;
+    height: 100px;
   }
 
 }
