@@ -8,6 +8,7 @@
   
   --background-image-uber: url('../Aula/src/assets/bguber.png');
   --background-image-city: url('../Aula/src/assets/bg-city.png');
+  --background-image-nike: url('../Aula/src/assets/bg.png');
   @keyframes floatUp {
     0% {
       transform: translateY(0px);
