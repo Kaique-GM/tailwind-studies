@@ -15,7 +15,8 @@
 <body class="font-[Poppins] bg-slate-200">
 
     <div class="flex w-full">
-        <aside class="hidden sm:flex w-full max-w-[200px] min-h-screen relative bg-white flex-col px-2 py-5">
+        <aside
+            class="border-r-2 border-gray-100 hidden sm:flex w-full max-w-[200px] min-h-screen relative bg-white flex-col px-2 py-5">
             <div class="fixed">
                 <div>
                     <h1 class="text-rose-500 text-3xl font-bold">DevHouse</h1>
@@ -71,11 +72,41 @@
                         <i class="fa fa-user md:ml-1"></i>
                     </button>
 
-                    <button id="btn-open" onclick="openMenu()" class="flex items-center justify-center px-4 py-2 sm:hidden">
+                    <button id="btn-open" onclick="openMenu()"
+                        class="flex items-center justify-center px-4 py-2 sm:hidden">
                         <i class="fa fa-bars" style="font-size: 24px"></i>
                     </button>
                 </div>
             </header>
+
+            <section class="w-full px-3 lg:px-6">
+                <div class="flex w-full items-baseline justify-between">
+                    <h1 class="font-bold text-3xl mt-4 mb-6">Compre ou Alugue</h1>
+                    <span class="hidden md:block text-gray-600">100 casas encontradas</span>
+                </div>
+
+                <div class="grid grid-cols-1 gap-4">
+                    <!-- Houses -->
+                    <a href="#"
+                        class="bg-white p-3 rounded-lg min-h-[400px] relative flex flex-col hover:shadow-lg duration-300">
+                        <div>
+
+                            <div class="group overflow-hidden rounded-lg">
+                                <div class="absolute z-40 top-5 left-4">
+                                    <div
+                                        class="flex bg-slate-50/70 group-hover:bg-white duration-300 self-start items-center justify-center gap-3 px-3 py-1 rounded-full">
+                                        <i class="fa fa-map" style="font-size: 12px;"></i>
+                                        <p class="font-medium text-sm">Campo Grande - MS</p>
+                                    </div>
+                                </div>
+
+                                <img src="assets/1.jpg" alt="casa 1"
+                                    class="group-hover:scale-110 duration-300 rounded-lg w-full h-64 object-cover">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </section>
         </main>
     </div>
 
