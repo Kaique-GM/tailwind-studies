@@ -36,7 +36,7 @@ Projeto de anúncio de tênis Nike, com animações e design atrativo para e-com
 ### 🏡 DevHouse - Estilo Airbnb
 Mini landing page inspirada em plataformas como Airbnb, com visual clean e disposição intuitiva.
 
-![DevHouse](./Au)
+![DevHouse](./Aula/src/assets/devHouse.png)
 
 ---
 
